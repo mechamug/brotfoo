@@ -46,3 +46,8 @@ def update(_):
 ani = FuncAnimation(fig, update, blit=True)
 plt.show()
 ```
+# Big Automaton
+
+<video controls autoplay width="100%" controls>
+  <source src="/brotfoo/img/cellular2.mp4" type="video/mp4">
+</video>
