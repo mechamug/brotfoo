@@ -3,15 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://mechamug.github.io/hugo/</loc>
+    <lastmod>2020-02-15T14:19:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://mechamug.github.io/hugo/categories/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://mechamug.github.io/hugo/tags/</loc>
   </url>
   
 </urlset>
