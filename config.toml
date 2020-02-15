@@ -3,6 +3,7 @@ title = "A Space For The Generate"
 theme = "hugo-notepadium"
 hasCJKLanguage = true
 enableRobotsTXT = true
+layoutsDir = "layout"
 
 [markup.highlight]
 codeFences = true
@@ -33,7 +34,6 @@ showCategories = false       # /categories/
 showTags = false             # /tags/
 
 # custom navigation items
-
 [[params.nav.custom]]
 title = "Buddhabrot"
 url = "/page/buddhabrot"

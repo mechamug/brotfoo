@@ -1,6 +1,6 @@
 # はじめまして
 
-Here be generative images. Start by looking at the examples below. Then, maybe browse through some of the posts, with more to explore and greater details. Almost all images have links to higher resolution versions and there is source code to try out. 
+Here be generative images. Start by looking at the examples below. Then, maybe browse through some of the posts, with more to explore and greater details. Almost all images have links to higher resolution versions and there is source code to try out.
 
 > *"Mathematics, rightly viewed, possesses not only truth, but supreme beauty — a beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show."*
 >

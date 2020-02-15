@@ -7,6 +7,16 @@ comments: true
   <source src="/brotfoo/img/cellular.mp4" type="video/mp4">
 </video>
 
+I am using a variation of a cellular automaton rule I found here:
+
+[Softology blog on cellular automata](https://softologyblog.wordpress.com/2020/01/24/alternating-neighborhoods-cyclic-cellular-automata/)
+
+He uses the neighboring states and increments a cell's state if they exceed a configured threshold.
+
+I was trying to use his update rule for automata with more states, but it would just stall out, because not enough states would match the rule. So, instead I thought I just use a larger range of differences for the surrounding states, but I am still only looking at surrounding cells. What also made a huge difference is that I let the rule wrap around, by using modulo, or else the pattern would just sweep up against the sides and dissipate. This way I can use way more states.
+
+The colormap is being applied by pyplot automatically. I only pick the map and by default it will nicely spread out the colormap over the range of minimum and maximum values. If the maximum values are far, far higher than the rest, as with the Buddhabrot I had recently made (see same website), taking the logarithm or square of all values is a huge visibility improvement. On top of that, numpy has vectorized versions of all those operations, so it's a breeze to use them and prototype new algorithms.
+
 ```Python
 import numpy as np
 import matplotlib.pyplot as plt
