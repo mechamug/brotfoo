@@ -1,0 +1,67 @@
+baseURL = "https://mechamug.github.io/hugo/"
+title = "A Space For The Generate"
+theme = "hugo-notepadium"
+hasCJKLanguage = true
+enableRobotsTXT = true
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true  # enable raw HTML in Markdown
+
+[params]
+style = "dark"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
+logo = "img/tm/bb-afmhot.png"  # if you have a logo png
+
+[params.comments]
+enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+
+[params.math]
+enable = true  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
+use = "mathjax"  # option: "katex", "mathjax". default: "katex"
+
+[params.syntax]
+use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
+theme = "dracula"
+darkTheme = "xcode-dark"  # apply this theme in dark mode
+
+[params.nav]
+showCategories = false       # /categories/
+showTags = false             # /tags/
+
+# custom navigation items
+
+[[params.nav.custom]]
+title = "Buddhabrot"
+url = "/page/buddhabrot"
+
+[[params.nav.custom]]
+title = "Julia Set"
+url = "/page/julia"
+
+[[params.nav.custom]]
+title = "Cellular Automata"
+url = "/page/cellular"
+
+[[params.nav.custom]]
+title = "Domain Coloring"
+url = "/page/domain-coloring"
+
+[[params.nav.custom]]
+title = "Folded Mandelbrot"
+url = "/page/foldbrot"
+
+[[params.nav.custom]]
+title = "Domain Colored Mandelbrot"
+url = "/page/domainbrot"
+
+[[params.nav.custom]]
+title = "Conjugate Julia"
+url = "/page/conjugate-julia"
+
+[[params.nav.custom]]
+title = "Numpy Magic"
+url = "/page/shortbrot"
