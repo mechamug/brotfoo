@@ -1,15 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Index on My New Hugo Site</title>
-    <link>https://mechamug.github.io/hugo/</link>
-    <description>Recent content in Index on My New Hugo Site</description>
+    <title>A Space For The Generate</title>
+    <link>/hugo/</link>
+    <description>Recent content on A Space For The Generate</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 15 Feb 2020 14:19:25 +0100</lastBuildDate>
     
-	<atom:link href="https://mechamug.github.io/hugo/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pages</title>
+      <link>/hugo/page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/hugo/page/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

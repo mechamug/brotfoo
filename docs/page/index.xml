@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on A Space For The Generate</title>
+    <link>/hugo/page/</link>
+    <description>Recent content in Pages on A Space For The Generate</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+        <atom:link href="/hugo/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cellular Automata</title>
+      <link>/hugo/page/cellular/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/hugo/page/cellular/</guid>
+      <description>import numpy as np import matplotlib.pyplot as plt from matplotlib.animation import FuncAnimation from numpy import random as nr import itertools as it from numba import jit fig, ax = plt.subplots() xdata, ydata = [], [] S, N = 50, 100 im = nr.randint(0,N,(S,S)) ip = plt.imshow(im, interpolation=&amp;#39;gaussian&amp;#39;, cmap=&amp;#39;hsv&amp;#39;) def cn(im, x, y): ni = 0 for i,j in it.product(*([[-1,0,1]]*2)): if abs(im[(x+i)%S, (y+j)%S] - (im[x,y])) &amp;lt; 7: ni += 1 return ni def update(_): for x in range(S): for y in range(S): ni = cn(im, x, y) if ni &amp;gt;= 3: im[x,y] = (im[x,y] + 1)%N ip.</description>
+    </item>
+    
+    <item>
+      <title>Conjugate Julia Set</title>
+      <link>/hugo/page/conjugate-julia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/hugo/page/conjugate-julia/</guid>
+      <description>A very simple idea, rendering the Julia set of a point and its complex conjugate in the same picture, overlayed.
+import numpy as np import matplotlib.pyplot as plt from os import system from numba import jit from numpy import random as nr import sys @jit def julia(): c = complex(-0.8, 0.156) s, rx, ry, t, it = 2, 3.5, 2.5, 1000, 150 imx, imy = int(2650 * s), int(1600 * s) julia = np.</description>
+    </item>
+    
+    <item>
+      <title>Domain Colored Mandelbrot</title>
+      <link>/hugo/page/domainbrot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/hugo/page/domainbrot/</guid>
+      <description>The same as a regular Mandelbrot set, but instead of the boring solid color, the same technique as for some domain coloring approaches is used, with a color index being chosen on the interval $[-\pi, \pi]$, scaled to the range of the maximum iterations chosen, i.e. the escape bound.</description>
+    </item>
+    
+    <item>
+      <title>Domain Coloring</title>
+      <link>/hugo/page/domain-coloring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/hugo/page/domain-coloring/</guid>
+      <description>A really simple way to do domain coloring in Python.
+ Domain coloring of the function $f(x) = \frac{sinc(z+i)}{tan(z-i)}$:
+import numpy as np import matplotlib.pyplot as plt x,y = np.ogrid[-10:6:2560j, -10:10:1600j] f = lambda z: np.sinc(z+i) / np.tan(z-i) plt.imsave(&amp;#39;graph.png&amp;#39;, np.angle(f((x - 1j*y).T)), cmap=&amp;#39;twilight&amp;#39;) Another Example</description>
+    </item>
+    
+    <item>
+      <title>Numpy Python Magic</title>
+      <link>/hugo/page/shortbrot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/hugo/page/shortbrot/</guid>
+      <description>It&amp;rsquo;s exciting how compact one can write generation of the mandelbrot in Python with NumPy.
+import numpy as n import matplotlib.pyplot as p import functools as f x,y=n.ogrid[-1:1:1000j,-1.5:1.5:1000j] t=x-1j*y p.imshow(n.angle(f.reduce(lambda z,_:z**2+t,[0]*1000,t)), cmap=&amp;#39;twilight&amp;#39;) p.show() Pastel Your reward, another Mandelbrot image.</description>
+    </item>
+    
+    <item>
+      <title>The Buddhabrot</title>
+      <link>/hugo/page/buddhabrot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/hugo/page/buddhabrot/</guid>
+      <description>This is an example of what now is commonly called the Buddhabrot. As complex numbers are being iterated on through the Mandelbrot&amp;rsquo;s recurrence relation, coordinates of intermediate complex numbers are marked, as opposed to only coloring points corresponding to their corresponding complex number&amp;rsquo;s iteration count.
+ Here is some source code in Python to create it.
+from numba import jit from matplotlib.pyplot import imsave from numpy import log, ones from numpy.</description>
+    </item>
+    
+    <item>
+      <title>The Folded Mandelbrot</title>
+      <link>/hugo/page/foldbrot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/hugo/page/foldbrot/</guid>
+      <description>A variation on the Mandelbrot set, the folded Mandelbrot.
+
+Try out this Mandelbrot Viewer. My gratitude goes to the original authors of the viewer and libraries.
+function countIterations(x, y) { var count = 0; var t = x; x=-y; y=t; var zx = x; var zy = y; var n = 100; var p = 200; while (count &amp;lt; maxIterations &amp;amp;&amp;amp; zx*zx + zy*zy &amp;lt; 20) { if (0==(count+1)%n) { x += zx*count/p; y += zy*count/p; n--; p++; } var new_zx = zx*zx - zy*zy + x; zy = 2*zx*zy + y; zx = new_zx; count++; } var angle = Math.</description>
+    </item>
+    
+    <item>
+      <title>The Julia Set</title>
+      <link>/hugo/page/julia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/hugo/page/julia/</guid>
+      <description>This is an example of a graphical representation of the Julia set. Click for a higher resolution version.
+ Here is some Python code to create it.
+import numpy as np import matplotlib.pyplot as plt from os import system from numba import jit from numpy import random as nr import sys @jit def julia(): c = complex(-0.8, 0.156) s, rx, ry, t, it = 2, 3.5, 2.5, 1000, 150 imx, imy = int(2650 * s), int(1600 * s) julia = np.</description>
+    </item>
+    
+  </channel>
+</rss>

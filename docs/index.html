@@ -1,134 +1,63 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>My New Hugo Site  | Index</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.64.1" />
-    
-    
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>A Space For The Generate</title><link rel="stylesheet" href="/hugo/css/core.min.118cbbf18c2915c433ca5c2e7d57a7c18b1832b7480cae11c19201a0d925fbedfb28b1ece87c100f2f973911208a392a.css" integrity="sha384-EYy78YwpFcQzylwufVenwYsYMrdIDK4RwZIBoNkl&#43;&#43;37KLHs6HwQDy&#43;XOREgijkq"><link rel="alternate" type="application/rss+xml" href="/hugo/index.xml" title="A Space For The Generate" /><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/hugo/"><img class="site logo" src="/hugo/img/tm/bb-afmhot.png" alt /><span class="site name">A Space For The Generate</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/hugo/page/buddhabrot">Buddhabrot</a><a class="nav item" href="/hugo/page/julia">Julia Set</a><a class="nav item" href="/hugo/page/cellular">Cellular Automata</a><a class="nav item" href="/hugo/page/domain-coloring">Domain Coloring</a><a class="nav item" href="/hugo/page/foldbrot">Folded Mandelbrot</a><a class="nav item" href="/hugo/page/domainbrot">Domain Colored Mandelbrot</a><a class="nav item" href="/hugo/page/conjugate-julia">Conjugate Julia</a><a class="nav item" href="/hugo/page/shortbrot">Numpy Magic</a></nav></div></span></div></section><div id="content"><article class="article markdown-body"><h1 id="はじめまして">はじめまして</h1>
+<p>Here be generative images. Start by looking at the examples below. Then, maybe browse through some of the posts, with more to explore and greater details. Almost all images have links to higher resolution versions and there is source code to try out. I am <em>xXCSGoProKidXx</em>, I have a K/D ratio of over 210, and I will be your host.</p>
+<blockquote>
+<p><em>&ldquo;Mathematics, rightly viewed, possesses not only truth, but supreme beauty — a beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.&quot;</em></p>
+<p>&ndash; Betrand Russel</p>
+</blockquote>
+<h2 id="mandelbrot-set">Mandelbrot Set</h2>
+<p>The Mandelbrot set is the set of complex numbers for which the function does not diverge when iterated from, i.e., for which the sequence, etc., remains bounded in absolute value. Its definition is credited to Adrien Douady who named it in tribute to the mathematician Benoit Mandelbrot. <a href="https://en.wikipedia.org/wiki/Mandelbrot_set"target="_blank">Wikipedia</a></p>
+<a href="/brotfoo/img/numba-plot-jet.png">
+    <img src="/brotfoo/img/tm/numba-plot-jet.png" />
+</a>
+<h2 id="buddhabrot">Buddhabrot</h2>
+<p>The Buddhabrot is the probability distribution over the trajectories of points that escape the Mandelbrot fractal. Its name reflects its pareidolic resemblance to classical depictions of Gautama Buddha, seated in a meditation pose with a forehead mark (tikka), a traditional topknot (ushnisha) and ringlet hair. <a href="https://en.wikipedia.org/wiki/Buddhabrot"target="_blank">Wikipedia</a></p>
+<a href="/brotfoo/img/bb-twilight_r.png">
+    <img src="/brotfoo/img/tm/bb-twilight_r.png" />
+</a>
+<h2 id="julia-set">Julia Set</h2>
+<p>In the context of complex dynamics, a topic of mathematics, the Julia set and the Fatou set are two complementary sets (Julia &ldquo;laces&rdquo; and Fatou &ldquo;dusts&rdquo;) defined from a function. Informally, the Fatou set of the function consists of values with the property that all nearby values behave similarly under repeated iteration of the function, and the Julia set consists of values such that an arbitrarily small perturbation can cause drastic changes in the sequence of iterated function values. Thus the behavior of the function on the Fatou set is &ldquo;regular&rdquo;, while on the Julia set its behavior is &ldquo;chaotic&rdquo;. <a href="https://en.wikipedia.org/wiki/Buddhabrot"target="_blank">Wikipedia</a></p>
+<a href="/brotfoo/img/julia-Spectral_r1.png">
+    <img src="/brotfoo/img/tm/julia-Spectral_r1.png" />
+</a>
+<h2 id="cellular-automata">Cellular Automata</h2>
+<p>A cellular automaton (pl. cellular automata, abbrev. CA) is a discrete model studied in computer science, mathematics, physics, complexity science, theoretical biology and microstructure modeling. Cellular automata are also called cellular spaces, tessellation automata, homogeneous structures, cellular structures, tessellation structures, and iterative arrays.
+<a href="https://en.wikipedia.org/wiki/Cellular_automaton"target="_blank">Wikipedia</a></p>
+<video controls autoplay width="100%" controls>
+  <source src="/brotfoo/img/cellular.mp4" type="video/mp4">
+</video>
+</article><ul class="note list"><li class="item"><a class="note" href="/hugo/page/cellular/">
+            <p class="note title">Cellular Automata</p><p class="note content">import numpy as np import matplotlib.pyplot as plt from matplotlib.animation import FuncAnimation from numpy import random as nr import itertools as it from numba import jit fig, ax = plt.subplots() xdata, ydata = [], [] S, N = 50, 100 im = nr.randint(0,N,(S,S)) ip = plt.imshow(im, interpolation=&#39;gaussian&#39;, cmap=&#39;hsv&#39;) def cn(im, x, y): ni = 0 for i,j in it.product(*([[-1,0,1]]*2)): if abs(im[(x+i)%S, (y+j)%S] - (im[x,y])) &lt; 7: ni += 1 return ni def update(_): for x in range(S): for y in range(S): ni = cn(im, x, y) if ni &gt;= 3: im[x,y] = (im[x,y] + 1)%N ip.<span class="mldr">&mldr;more</span></p></a></li><li class="item"><a class="note" href="/hugo/page/conjugate-julia/">
+            <p class="note title">Conjugate Julia Set</p><p class="note content">A very simple idea, rendering the Julia set of a point and its complex conjugate in the same picture, overlayed.
+import numpy as np import matplotlib.pyplot as plt from os import system from numba import jit from numpy import random as nr import sys @jit def julia(): c = complex(-0.8, 0.156) s, rx, ry, t, it = 2, 3.5, 2.5, 1000, 150 imx, imy = int(2650 * s), int(1600 * s) julia = np.<span class="mldr">&mldr;more</span></p></a></li><li class="item"><a class="note" href="/hugo/page/domainbrot/">
+            <p class="note title">Domain Colored Mandelbrot</p><p class="note content">The same as a regular Mandelbrot set, but instead of the boring solid color, the same technique as for some domain coloring approaches is used, with a color index being chosen on the interval $[-\pi, \pi]$, scaled to the range of the maximum iterations chosen, i.e. the escape bound.</p></a></li><li class="item"><a class="note" href="/hugo/page/domain-coloring/">
+            <p class="note title">Domain Coloring</p><p class="note content">A really simple way to do domain coloring in Python.
+ Domain coloring of the function $f(x) = \frac{sinc(z+i)}{tan(z-i)}$:
+import numpy as np import matplotlib.pyplot as plt x,y = np.ogrid[-10:6:2560j, -10:10:1600j] f = lambda z: np.sinc(z+i) / np.tan(z-i) plt.imsave(&#39;graph.png&#39;, np.angle(f((x - 1j*y).T)), cmap=&#39;twilight&#39;) Another Example</p></a></li><li class="item"><a class="note" href="/hugo/page/shortbrot/">
+            <p class="note title">Numpy Python Magic</p><p class="note content">It&rsquo;s exciting how compact one can write generation of the mandelbrot in Python with NumPy.
+import numpy as n import matplotlib.pyplot as p import functools as f x,y=n.ogrid[-1:1:1000j,-1.5:1.5:1000j] t=x-1j*y p.imshow(n.angle(f.reduce(lambda z,_:z**2+t,[0]*1000,t)), cmap=&#39;twilight&#39;) p.show() Pastel Your reward, another Mandelbrot image.</p></a></li><li class="item"><a class="note" href="/hugo/page/buddhabrot/">
+            <p class="note title">The Buddhabrot</p><p class="note content">This is an example of what now is commonly called the Buddhabrot. As complex numbers are being iterated on through the Mandelbrot&rsquo;s recurrence relation, coordinates of intermediate complex numbers are marked, as opposed to only coloring points corresponding to their corresponding complex number&rsquo;s iteration count.
+ Here is some source code in Python to create it.
+from numba import jit from matplotlib.pyplot import imsave from numpy import log, ones from numpy.<span class="mldr">&mldr;more</span></p></a></li><li class="item"><a class="note" href="/hugo/page/foldbrot/">
+            <p class="note title">The Folded Mandelbrot</p><p class="note content">A variation on the Mandelbrot set, the folded Mandelbrot.
 
-    
-    
-      <link href="/hugo/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css" rel="stylesheet">
-    
+Try out this Mandelbrot Viewer. My gratitude goes to the original authors of the viewer and libraries.
+function countIterations(x, y) { var count = 0; var t = x; x=-y; y=t; var zx = x; var zy = y; var n = 100; var p = 200; while (count &lt; maxIterations &amp;&amp; zx*zx + zy*zy &lt; 20) { if (0==(count+1)%n) { x += zx*count/p; y += zy*count/p; n--; p++; } var new_zx = zx*zx - zy*zy + x; zy = 2*zx*zy + y; zx = new_zx; count++; } var angle = Math.<span class="mldr">&mldr;more</span></p></a></li><li class="item"><a class="note" href="/hugo/page/julia/">
+            <p class="note title">The Julia Set</p><p class="note content">This is an example of a graphical representation of the Julia set. Click for a higher resolution version.
+ Here is some Python code to create it.
+import numpy as np import matplotlib.pyplot as plt from os import system from numba import jit from numpy import random as nr import sys @jit def julia(): c = complex(-0.8, 0.156) s, rx, ry, t, it = 2, 3.5, 2.5, 1000, 150 imx, imy = int(2650 * s), int(1600 * s) julia = np.<span class="mldr">&mldr;more</span></p></a></li></ul></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">A Space For The Generate</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+        <script
+            type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></div>
+</body>
 
-    
-
-    
-      
-    
-
-    
-    
-      <link href="/hugo/index.xml" rel="alternate" type="application/rss+xml" title="My New Hugo Site" />
-      <link href="/hugo/index.xml" rel="feed" type="application/rss+xml" title="My New Hugo Site" />
-      
-    
-    
-    <meta property="og:title" content="Index" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://mechamug.github.io/hugo/" />
-<meta property="og:updated_time" content="2020-02-15T14:19:25+01:00" />
-<meta itemprop="name" content="Index">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Index"/>
-<meta name="twitter:description" content=""/>
-
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
-
-    
-
-  <header>
-    <div class="pb3-m pb6-l bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="https://mechamug.github.io/hugo/" class="f3 fw2 hover-white no-underline white-90 dib">
-      My New Hugo Site
-    </a>
-    <div class="flex-l items-center">
-      
-
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-  </div>
-</nav>
-
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          Index
-        </h1>
-        
-      </div>
-    </div>
-  </header>
-
-
-    <main class="pb7" role="main">
-      
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-    <h1 id="welcome">Welcome</h1>
-<p>This is the index page.</p>
-
-  </article>
-  
-  
-  
-  
-  
-  
-  
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://mechamug.github.io/hugo/" >
-    &copy;  My New Hugo Site 2020 
-  </a>
-    <div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-  </div>
-</footer>
-
-    
-
-  <script src="/hugo/dist/js/app.3fc0f988d21662902933.js"></script>
-
-
-  </body>
 </html>

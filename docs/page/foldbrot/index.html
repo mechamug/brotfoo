@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>The Folded Mandelbrot&nbsp;&ndash;&nbsp;A Space For The Generate</title><link rel="stylesheet" href="/hugo/css/core.min.118cbbf18c2915c433ca5c2e7d57a7c18b1832b7480cae11c19201a0d925fbedfb28b1ece87c100f2f973911208a392a.css" integrity="sha384-EYy78YwpFcQzylwufVenwYsYMrdIDK4RwZIBoNkl&#43;&#43;37KLHs6HwQDy&#43;XOREgijkq"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/hugo/"><img class="site logo" src="/hugo/img/tm/bb-afmhot.png" alt /><span class="site name">A Space For The Generate</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/hugo/page/buddhabrot">Buddhabrot</a><a class="nav item" href="/hugo/page/julia">Julia Set</a><a class="nav item" href="/hugo/page/cellular">Cellular Automata</a><a class="nav item" href="/hugo/page/domain-coloring">Domain Coloring</a><a class="nav item" href="/hugo/page/foldbrot">Folded Mandelbrot</a><a class="nav item" href="/hugo/page/domainbrot">Domain Colored Mandelbrot</a><a class="nav item" href="/hugo/page/conjugate-julia">Conjugate Julia</a><a class="nav item" href="/hugo/page/shortbrot">Numpy Magic</a></nav></div></span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">The Folded Mandelbrot</h1></section><article class="article markdown-body"><p>A variation on the Mandelbrot set, the folded Mandelbrot.</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="/brotfoo/img/foldedbrot1.png"><img  src="/brotfoo/img/foldedbrot1.png"
+        alt="Folded Mandelbrot"/></a></p>
+<p>Try out this <a href="https://asfdfsaf.github.io/mv/viewer.html"target="_blank">Mandelbrot Viewer</a>. My gratitude goes to the original authors of the viewer and libraries.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">countIterations</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
+    <span class="nx">x</span><span class="o">=</span><span class="o">-</span><span class="nx">y</span><span class="p">;</span>
+    <span class="nx">y</span><span class="o">=</span><span class="nx">t</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">zx</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">zy</span> <span class="o">=</span> <span class="nx">y</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&lt;</span> <span class="nx">maxIterations</span> <span class="o">&amp;&amp;</span> <span class="nx">zx</span><span class="o">*</span><span class="nx">zx</span> <span class="o">+</span> <span class="nx">zy</span><span class="o">*</span><span class="nx">zy</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="mi">0</span><span class="o">==</span><span class="p">(</span><span class="nx">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">x</span> <span class="o">+=</span> <span class="nx">zx</span><span class="o">*</span><span class="nx">count</span><span class="o">/</span><span class="nx">p</span><span class="p">;</span>
+            <span class="nx">y</span> <span class="o">+=</span> <span class="nx">zy</span><span class="o">*</span><span class="nx">count</span><span class="o">/</span><span class="nx">p</span><span class="p">;</span>
+            <span class="nx">n</span><span class="o">--</span><span class="p">;</span>
+            <span class="nx">p</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kd">var</span> <span class="nx">new_zx</span> <span class="o">=</span> <span class="nx">zx</span><span class="o">*</span><span class="nx">zx</span> <span class="o">-</span> <span class="nx">zy</span><span class="o">*</span><span class="nx">zy</span> <span class="o">+</span> <span class="nx">x</span><span class="p">;</span>
+        <span class="nx">zy</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="nx">zx</span><span class="o">*</span><span class="nx">zy</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+        <span class="nx">zx</span> <span class="o">=</span> <span class="nx">new_zx</span><span class="p">;</span>
+        <span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">var</span> <span class="nx">angle</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">atan</span><span class="p">(</span><span class="nx">zy</span><span class="o">/</span><span class="nx">zx</span><span class="p">)</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="o">*</span><span class="nx">count</span><span class="p">)</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">count</span> <span class="o">&lt;</span> <span class="nx">maxIterations</span> <span class="o">?</span> <span class="nx">count</span> <span class="o">:</span> <span class="nx">angle</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="alternative-coloration">Alternative Coloration</h2>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="/brotfoo/img/foldedbrot2.png"><img  src="/brotfoo/img/foldedbrot2.png"
+        alt="Folded Mandelbrot"/></a></p>
+<h2 id="red--blue">Red &amp; Blue</h2>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="/brotfoo/img/foldedbrot3.png"><img  src="/brotfoo/img/foldedbrot3.png"
+        alt="Folded Mandelbrot"/></a></p>
+<h2 id="burning">Burning</h2>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="/brotfoo/img/foldedbrot4.png"><img  src="/brotfoo/img/foldedbrot4.png"
+        alt="Folded Mandelbrot"/></a></p>
+<h2 id="hot--cold">Hot &amp; Cold</h2>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="/brotfoo/img/foldedbrot5.png"><img  src="/brotfoo/img/foldedbrot5.png"
+        alt="Folded Mandelbrot"/></a></p>
+</article><section class="article navigation"><p><a class="link" href="/hugo/page/buddhabrot/"><span class="li">&larr;</span>The Buddhabrot</a></p><p><a class="link" href="/hugo/page/julia/"><span class="li">&rarr;</span>The Julia Set</a class="link">
+    </p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">A Space For The Generate</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+        <script
+            type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></div>
+</body>
+
+</html>

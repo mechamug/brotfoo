@@ -1,18 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://mechamug.github.io/hugo/</loc>
-    <lastmod>2020-02-15T14:19:25+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mechamug.github.io/hugo/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mechamug.github.io/hugo/tags/</loc>
-  </url>
-  
-</urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
+    <loc>https://mechamug.github.io/hugo/</loc><priority>0</priority></url><url>
+    <loc>https://mechamug.github.io/hugo/categories/</loc></url><url>
+    <loc>https://mechamug.github.io/hugo/page/cellular/</loc></url><url>
+    <loc>https://mechamug.github.io/hugo/page/conjugate-julia/</loc></url><url>
+    <loc>https://mechamug.github.io/hugo/page/domainbrot/</loc></url><url>
+    <loc>https://mechamug.github.io/hugo/page/domain-coloring/</loc></url><url>
+    <loc>https://mechamug.github.io/hugo/page/shortbrot/</loc></url><url>
+    <loc>https://mechamug.github.io/hugo/page/</loc></url><url>
+    <loc>https://mechamug.github.io/hugo/tags/</loc></url><url>
+    <loc>https://mechamug.github.io/hugo/page/buddhabrot/</loc></url><url>
+    <loc>https://mechamug.github.io/hugo/page/foldbrot/</loc></url><url>
+    <loc>https://mechamug.github.io/hugo/page/julia/</loc></url></urlset>
