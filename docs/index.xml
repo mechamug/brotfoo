@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>A Space For The Generate</title>
-    <link>/hugo/</link>
+    <link>/brotfoo/</link>
     <description>Recent content on A Space For The Generate</description>
     <generator>Hugo -- gohugo.io</generator>
     
-        <atom:link href="/hugo/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/brotfoo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Pages</title>
-      <link>/hugo/page/</link>
+      <link>/brotfoo/page/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/hugo/page/</guid>
+      <guid>/brotfoo/page/</guid>
       <description></description>
     </item>
     

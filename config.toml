@@ -1,4 +1,4 @@
-baseURL = "https://mechamug.github.io/hugo/"
+baseURL = "https://mechamug.github.io/brotfoo/"
 title = "A Space For The Generate"
 theme = "hugo-notepadium"
 hasCJKLanguage = true

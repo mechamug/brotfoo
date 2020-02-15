@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on A Space For The Generate</title>
-    <link>/hugo/tags/</link>
+    <link>/brotfoo/tags/</link>
     <description>Recent content in Tags on A Space For The Generate</description>
     <generator>Hugo -- gohugo.io</generator>
     
-        <atom:link href="/hugo/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/brotfoo/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
