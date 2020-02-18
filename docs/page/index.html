@@ -14,15 +14,7 @@ import numpy as np import matplotlib.pyplot as plt from os import system from nu
  Domain coloring of the function $f(x) = \frac{sinc(z+i)}{tan(z-i)}$:
 import numpy as np import matplotlib.pyplot as plt x,y = np.ogrid[-10:6:2560j, -10:10:1600j] f = lambda z: np.sinc(z+i) / np.tan(z-i) plt.imsave(&#39;graph.png&#39;, np.angle(f((x - 1j*y).T)), cmap=&#39;twilight&#39;) Another Example</p></a></li><li class="item"><a class="note" href="/brotfoo/page/eht-blackhole/">
             <p class="note title">EHT Black Holes</p><p class="note content">A few images generated with the source code from the EHT black hole imaging project. Color maps were taken from the Palettable Python package. I have made some minor modifications to the code, which I felt produced visually more appealing results and allowed me to change some additional parameters of the image display.
-agSunset_7 
-Antique_7_r 
-Aquatic1_5_r 
-Aquatic3_5_r 
-Cube1_10_r 
-GrandBudapest5_5 
-Gray_5_r 
-Inferno_5_r 
-LinearL_3<span class="mldr">&mldr;more</span></p></a></li><li class="item"><a class="note" href="/brotfoo/page/shortbrot/">
+There were a few news articles circulating about this not too long ago. I found the project very interesting and had played around with the code as soon as it had been released.<span class="mldr">&mldr;more</span></p></a></li><li class="item"><a class="note" href="/brotfoo/page/shortbrot/">
             <p class="note title">Numpy Python Magic</p><p class="note content">It&rsquo;s exciting how compact one can write generation of the mandelbrot in Python with NumPy.
 import numpy as n import matplotlib.pyplot as p import functools as f x,y=n.ogrid[-1:1:1000j,-1.5:1.5:1000j] t=x-1j*y p.imshow(n.angle(f.reduce(lambda z,_:z**2+t,[0]*1000,t)), cmap=&#39;twilight&#39;) p.show() Pastel Your reward, another Mandelbrot image.</p></a></li><li class="item"><a class="note" href="/brotfoo/page/buddhabrot/">
             <p class="note title">The Buddhabrot</p><p class="note content">This is an example of what now is commonly called the Buddhabrot. As complex numbers are being iterated on through the Mandelbrot&rsquo;s recurrence relation, coordinates of intermediate complex numbers are marked, as opposed to only coloring points corresponding to their corresponding complex number&rsquo;s iteration count.
