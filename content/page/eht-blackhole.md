@@ -3,7 +3,7 @@ title: EHT Black Holes
 comments: true
 ---
 
-A few images generated with the source code from the EHT black hole imaging project. Color maps were taken from the [Palettable Python package](https://jiffyclub.github.io/palettable/). I have made some minor modifications to the code, which I felt produced visually more appealing results and allowed me to change some additional parameters of the image display.
+A few images generated with the source code from the [EHT black hole imaging project](https://github.com/achael/eht-imaging). Color maps were taken from the [Palettable Python package](https://jiffyclub.github.io/palettable/). I have made some minor modifications to the code, which I felt produced visually more appealing results and allowed me to change some additional parameters of the image display.
 
 ## agSunset_7
 ![](/brotfoo/img/blackhole-agSunset_7.png)
