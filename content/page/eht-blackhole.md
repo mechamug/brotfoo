@@ -17,7 +17,7 @@ Here is some important feedback I have received on the images:
 >
 > You can read a bit more about it [here](https://jakevdp.github.io/blog/2014/10/16/how-bad-is-your-colormap/) and in [this paper](https://www.kennethmoreland.com/color-advice/BadColorMaps.pdf).
 
-Therefor, these images should be taken for the visual appeal only. For scientific data in formal settings, these are not good color maps to use.
+Therefor, these images should be taken for the visual appeal only. For scientific data in formal settings, these are not good color maps to use. The viridis color map below might be the only one that would be acceptable, being generally recognized to be a perceptually uniform color map.
 
 ## agSunset_7
 ![](/brotfoo/img/blackhole-agSunset_7.png)
