@@ -75,9 +75,8 @@ import numpy as n import matplotlib.pyplot as p import functools as f x,y=n.ogri
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/brotfoo/page/buddhabrot/</guid>
-      <description>This is an example of what now is commonly called the Buddhabrot. As complex numbers are being iterated on through the Mandelbrot&amp;rsquo;s recurrence relation, coordinates of intermediate complex numbers are marked, as opposed to only coloring points corresponding to their corresponding complex number&amp;rsquo;s iteration count.
- Here is some source code in Python to create it.
-from numba import jit from matplotlib.pyplot import imsave from numpy import log, ones from numpy.</description>
+      <description>This is a variation of what now is commonly called the Buddhabrot. As complex numbers are being iterated on through the Mandelbrot&amp;rsquo;s recurrence relation, coordinates of intermediate complex numbers are marked, as opposed to only coloring points corresponding to their corresponding complex number&amp;rsquo;s iteration count.
+Someone had corrected me on Reddit, who I believe to have been the author of the great web site Softology, that this is not the usual way the Buddhabrot is drawn, because I am including orbits of the proper Mandelbrot set, i.</description>
     </item>
     
     <item>

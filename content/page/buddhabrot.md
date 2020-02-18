@@ -3,7 +3,13 @@ title: The Buddhabrot
 comments: true
 ---
 
-This is an example of what now is commonly called the Buddhabrot. As complex numbers are being iterated on through the Mandelbrot's recurrence relation, coordinates of intermediate complex numbers are marked, as opposed to only coloring points corresponding to their corresponding complex number's iteration count.
+This is a variation of what now is commonly called the Buddhabrot. As complex numbers are being iterated on through the Mandelbrot's recurrence relation, coordinates of intermediate complex numbers are marked, as opposed to only coloring points corresponding to their corresponding complex number's iteration count.
+
+Someone had corrected me on Reddit, who I believe to have been the author of the great web site [Softology](https://softologyblog.wordpress.com/2011/06/26/buddhabrot-fractals/), that this is not the usual way the Buddhabrot is drawn, because I am including orbits of the proper Mandelbrot set, i.e. the interior. I will accordingly call this the "Anti-Buddhabrot" going forward.
+
+> That is the "anti-buddhabrot". You want to skip orbits that start within the mandelbrot set to create a true buddhabrot.
+>
+> I have some tips here that may help https://softologyblog.wordpress.com/2011/06/26/buddhabrot-fractals/
 
 <a href="/brotfoo/img/bb-nipy_spectral.png">
     <img src="/brotfoo/img/tm/bb-nipy_spectral.png" />
