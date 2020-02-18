@@ -66,3 +66,7 @@ url = "/page/conjugate-julia"
 [[params.nav.custom]]
 title = "Numpy Magic"
 url = "/page/shortbrot"
+
+[[params.nav.custom]]
+title = "EHT Black Hole"
+url = "/page/eht-blackhole"
