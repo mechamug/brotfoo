@@ -3,7 +3,7 @@ title: The Folded Mandelbrot
 comments: true
 ---
 
-A variation on the Mandelbrot set, the folded Mandelbrot. 
+A variation on the Mandelbrot set, the folded Mandelbrot.
 
 ![Folded Mandelbrot](/brotfoo/img/foldedbrot1.png)
 
@@ -35,6 +35,9 @@ function countIterations(x, y) {
     return count < maxIterations ? count : angle;
 }
 ```
+
+## Spectral
+![Folded Mandelbrot](/brotfoo/img/foldedbrot6.png)
 
 ## Alternative Coloration
 ![Folded Mandelbrot](/brotfoo/img/foldedbrot2.png)
