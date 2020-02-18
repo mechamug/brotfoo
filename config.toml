@@ -23,7 +23,7 @@ enable = false  # En/Disable comments globally, default: false. You can always e
 
 [params.math]
 enable = true  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
-use = "katex"  # option: "katex", "mathjax". default: "katex"
+use = "mathjax"  # option: "katex", "mathjax". default: "katex"
 
 [params.syntax]
 use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
