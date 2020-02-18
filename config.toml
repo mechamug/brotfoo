@@ -10,12 +10,12 @@ codeFences = true
 noClasses = false
 
 [markup.goldmark.renderer]
-unsafe = true  # enable raw HTML in Markdown
+unsafe = true
 
 [params]
-style = "dark"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
-dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
-logo = "img/tm/bb-afmhot.png"  # if you have a logo png
+style = "dark"
+dateFormat = "Monday, January 2, 2006"
+logo = "img/tm/bb-afmhot.png"
 favicon_ico = "favicon.ico"
 
 [params.comments]
@@ -23,7 +23,7 @@ enable = false  # En/Disable comments globally, default: false. You can always e
 
 [params.math]
 enable = true  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
-use = "mathjax"  # option: "katex", "mathjax". default: "katex"
+use = "katex"  # option: "katex", "mathjax". default: "katex"
 
 [params.syntax]
 use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
