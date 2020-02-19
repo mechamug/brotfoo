@@ -19,32 +19,26 @@ Here is some important feedback I have received on the images:
 
 Therefor, these images should be taken for the visual appeal only. For scientific data in formal settings, these are not good color maps to use. The viridis color map below might be the only one that would be acceptable, being generally recognized to be a perceptually uniform color map.
 
+## M87 afmhot
+![](/brotfoo/img/howes_m87_EHT2017_afmhot_orig.png)
+## SagrA twilight_shifted
+![](/brotfoo/img/jason_mri_eofn_EHT2017_twilight_shifted_orig.png)
+## SagrA afmhot
+![](/brotfoo/img/jason_mri_eofn_EHT2017_afmhot_orig.png)
+## SagrA inferno
+![](/brotfoo/img/jason_mri_eofn_EHT2017_inferno_orig.png)
 ## agSunset_7
 ![](/brotfoo/img/blackhole-agSunset_7.png)
-## Antique_7_r
-![](/brotfoo/img/blackhole-Antique_7_r.png)
-## Aquatic1_5_r
-![](/brotfoo/img/blackhole-Aquatic1_5_r.png)
 ## Aquatic3_5_r
 ![](/brotfoo/img/blackhole-Aquatic3_5_r.png)
 ## Cube1_10_r
 ![](/brotfoo/img/blackhole-Cube1_10_r.png)
 ## GrandBudapest5_5
 ![](/brotfoo/img/blackhole-GrandBudapest5_5.png)
-## Gray_5_r
-![](/brotfoo/img/blackhole-Gray_5_r.png)
-## Inferno_5_r
-![](/brotfoo/img/blackhole-Inferno_5_r.png)
 ## LinearL_3
 ![](/brotfoo/img/blackhole-LinearL_3.png)
-## Safe_6
-![](/brotfoo/img/blackhole-Safe_6.png)
-## SunsetDark_7_r
-![](/brotfoo/img/blackhole-SunsetDark_7_r.png)
 ## Viridis_18
 ![](/brotfoo/img/blackhole-Viridis_18.png)
-## Vivid_10_r
-![](/brotfoo/img/blackhole-Vivid_10_r.png)
 ## Zissou_5_r
 ![](/brotfoo/img/blackhole-Zissou_5_r.png)
 ## Zissou_5
